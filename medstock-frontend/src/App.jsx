@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { RootLayout } from '@/layouts/RootLayout';
 
@@ -7,9 +7,15 @@ const Medicines = lazy(() => import('@/pages/Medicines'));
 const AiAssistant = lazy(() => import('@/pages/AiAssistant'));
 const Transactions = lazy(() => import('@/pages/Transactions'));
 const Alerts = lazy(() => import('@/pages/Alerts'));
+const Landing = lazy(() => import('@/pages/Landing'));
+const Analytics = lazy(() => import('@/pages/Analytics'));
+const Pharmacy = lazy(() => import('@/pages/Pharmacy'));
+const About = lazy(() => import('@/pages/About'));
+const DoseTracker = lazy(() => import('@/pages/DoseTracker'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
 const router = createBrowserRouter([
+  { path: '/restok', element: <Suspense fallback={null}><Landing /></Suspense> },
   {
     path: '/',
     element: <RootLayout />,
@@ -19,6 +25,10 @@ const router = createBrowserRouter([
       { path: 'ai', element: <AiAssistant /> },
       { path: 'transactions', element: <Transactions /> },
       { path: 'alerts', element: <Alerts /> },
+      { path: 'analytics', element: <Analytics /> },
+      { path: 'pharmacy', element: <Pharmacy /> },
+      { path: 'about', element: <About /> },
+      { path: 'dose-tracker', element: <DoseTracker /> },
       { path: '*', element: <NotFound /> },
     ],
   },

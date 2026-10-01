@@ -1,4 +1,4 @@
-import { Bell, Boxes, History, LayoutDashboard, Sparkles } from 'lucide-react';
+import { Bell, Boxes, History, LayoutDashboard, ShoppingCart, Sparkles } from 'lucide-react';
 
 export const navItems = [
   { to: '/', label: 'Home', icon: LayoutDashboard, end: true },
@@ -6,4 +6,5 @@ export const navItems = [
   { to: '/ai', label: 'AI Update', icon: Sparkles },
   { to: '/transactions', label: 'History', icon: History },
   { to: '/alerts', label: 'Alerts', icon: Bell },
+  { to: '/pharmacy', label: 'Cart', icon: ShoppingCart },
 ];
