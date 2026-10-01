@@ -6,6 +6,7 @@ import { MobileHeader } from "@/components/MobileHeader";
 import { PageState } from "@/components/PageState";
 import { FloatingIcons } from "@/components/decor/FloatingIcons";
 import { Footer } from "@/components/Footer";
+import { ActivityTracker } from '@/components/ActivityTracker';
 
 export function RootLayout() {
   return (

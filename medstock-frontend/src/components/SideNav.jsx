@@ -1,5 +1,5 @@
 import { NavLink, Link } from 'react-router-dom';
-import { Globe } from 'lucide-react';
+import { Globe ,Activity, Shield } from 'lucide-react';
 import { BrandLogo } from '@/components/BrandLogo';
 import { navItems } from '@/utils/navItems';
 import { BRAND } from '@/utils/brand';
@@ -28,6 +28,26 @@ export function SideNav() {
             {label}
           </NavLink>
         ))}
+        <div className="mt-5 border-t border-slate-100 pt-4">
+  <p className="mb-2 px-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+    Insights
+  </p>
+
+  <NavLink
+    to="/activity-security"
+    className={({ isActive }) =>
+      cn(
+        'flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors',
+        isActive
+          ? 'bg-green-50 text-green-700'
+          : 'text-slate-600 hover:bg-slate-50'
+      )
+    }
+  >
+    <Shield size={18} />
+    User Activity &amp; Security
+  </NavLink>
+</div>
       </nav>
       <Link to="/restok" className="mb-3 flex items-center gap-2 rounded-xl border border-green-100 bg-green-50/60 px-3 py-2 text-xs font-medium text-green-700 hover:bg-green-50">
         <Globe size={14} /> View landing page

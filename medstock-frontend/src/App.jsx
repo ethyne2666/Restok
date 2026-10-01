@@ -13,6 +13,7 @@ const Pharmacy = lazy(() => import('@/pages/Pharmacy'));
 const About = lazy(() => import('@/pages/About'));
 const DoseTracker = lazy(() => import('@/pages/DoseTracker'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
+const ActivitySecurity = lazy(() => import('@/pages/ActivitySecurity'));
 
 const router = createBrowserRouter([
   { path: '/restok', element: <Suspense fallback={null}><Landing /></Suspense> },
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: 'about', element: <About /> },
       { path: 'dose-tracker', element: <DoseTracker /> },
       { path: '*', element: <NotFound /> },
+      { path: 'activity-security', element: <ActivitySecurity /> },
     ],
   },
 ]);
